@@ -1,0 +1,24 @@
+<div class="row position-fixed my-nav">
+    <div class="container">
+        <nav class="navbar bg-light navbar-dark fixed-top shadow-lg">
+            <div class="dropdown">
+                <button class="navbar-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownLink">
+                    <span class="navbar-toggler-icon small p-0"></span>
+                </button>
+                <div class="dropdown-menu " aria-labelledby="dropdownLink">
+                    <a class="dropdown-item" routerLink='/home'><strong class="ml-2">HOME</strong></a>
+                    <a routerLink='/courses' class="dropdown-item">Courses</a>
+                </div>
+            </div>
+
+            <a href="index.html" class="navbar-brand d-none d-md-block pl-2"><img src="../assets/img/udemy.jpg" alt="Udemy" width="150px"></a>
+
+            <!-- <form class="form-inline my-2 my-lg-0 d-none d-lg-block ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form> -->
+
+        </nav>
+    </div>
+</div>
+<router-outlet></router-outlet>

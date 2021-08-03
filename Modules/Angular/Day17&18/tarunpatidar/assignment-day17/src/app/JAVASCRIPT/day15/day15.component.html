@@ -1,0 +1,42 @@
+<div class="container bg-info text-dark mt-5">
+    <h2 class="display-4 text-light text-center font-weight-bold">Calculator</h2>
+    <form>
+        <div class="form-group">
+            <label for="usr">Enter First Number</label>
+            <input type="number" class="form-control" id="num1" name="First Number">
+            <label for="usr">Enter Second Number</label>
+            <input type="number" class="form-control" id="num2" name="Second Number">
+
+        </div>
+        <label for="usr">Choose Any One Option</label>
+        <div class="form-check">
+
+            <label class="form-check-label" for="radio1">
+              <input type="radio" class="form-check-input" id="add" name="optradio" value="+">Addition
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label" for="radio2">
+              <input type="radio" class="form-check-input" id="sub" name="optradio" value="-">Subtraction
+            </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" id="mul" name="optradio" value="x" >Multiplication
+            </label>
+          </div>
+         
+          <div class="form-check">
+            <label class="form-check-label">
+              <input type="radio" class="form-check-input" id="div" name="optradio" value="/" >Division
+            </label>
+          </div><br>
+          <div class="form-group">
+          <button type="submit" class="btn btn-warning" onclick="return calc();">Calculate</button>
+        <button type="reset" class="btn btn-danger">Reset</button>
+    </div>
+   
+    </form>
+    <h1 id="resultArea"></h1>
+    
+</div>

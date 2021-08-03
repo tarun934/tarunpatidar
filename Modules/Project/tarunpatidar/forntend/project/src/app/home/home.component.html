@@ -1,0 +1,106 @@
+<div class="row position-fixed my-nav">
+    <div class="container">
+        <nav class="navbar navbar-expand-md bg-ligt navbar-light fixed-top shadow-lg">
+            <div class="dropdown">
+                <button class="navbar-toggler" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="dropdownLink">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="dropdown-menu d-md-none" aria-labelledby="dropdownLink">
+                    <a routerLink='/home' routerLinkActive="" class="text-dark nav-link"><strong class="ml-2">HOME</strong></a>
+                    <a routerLink='/courses' routerLinkActive="" class="dropdown-item">Courses</a>
+                </div>
+            </div>
+
+            <a href="index.html" class="navbar-brand d-none d-md-block pl-2"><img src="../../assets/img/udemy.jpg" alt="Udemy" width="150px"></a>
+
+            <form class="form-inline my-2 my-lg-0 d-none d-lg-block ml-auto">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+
+            <ul class="nav ml-auto">
+                <li class="nav-item" [class.d-none]="isUserLoggedIn()">
+                    <a routerLink="/login" class="nav-link text-dark px-2">Login</a>
+                </li>
+                <li class="nav-item" [class.d-none]="isUserLoggedIn()">
+                    <a routerLink="/register" class="nav-link text-dark px-2">Sign Up</a>
+                </li>
+            </ul>
+
+        </nav>
+    </div>
+</div>
+
+<div class="row mt-5 pt-5 mx-0">
+    <div class="col-md-2 col-sm-3 d-none d-md-block bg-light border-right shadow-sm">
+        <div class="container-fluid my-sidenav">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" routerLink='/home' routerLinkActive="active-item"><strong>Home</strong></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" routerLink='/courses' routerLinkActive="active-item"><strong>Courses</strong></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<footer class="container-fluid">
+    <div class="row bg-dark pt-3">
+        <div class="col-xl-1">
+            <a href="index.html">
+                <img src="../../assets/img/Ulogo.jpg" alt="Udemy" width="35px">
+            </a>
+        </div>
+        <div class="col-xl-2">
+            <ul class="nav flex-column text-light">UDEMY
+                <li class="nav-item">
+                    <a class="nav-link text-secodary" href="#">Udemy Business</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secodary" href="#">Teach on Udemy</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secodary" href="#">Get The App</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secodary" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-secodary" href="#">Contact Us</a>
+                </li>              
+            </ul>
+        </div>
+        <div class="col-xl-2">
+            <li class="nav-item">
+                <a class="nav-link text-secodary" href="#">Careers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secodary" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secodary" href="#">Help and Support</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secodary" href="#">Affiliate</a>
+            </li>
+        </div>
+        <div class="col-xl-2">
+            <li class="nav-item">
+                <a class="nav-link text-secodary" href="#">Terms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-secodary" href="#">Privacy Policy</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link text-secodary" href="#">Sitemap</a>
+            </li>
+        </div>
+        <div class="col-xl-3"></div>
+    </div>
+</footer>

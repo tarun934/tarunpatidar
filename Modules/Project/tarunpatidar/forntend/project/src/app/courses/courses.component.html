@@ -1,0 +1,25 @@
+<div class="row py-5">
+    <div class="col-auto mr-auto h3">All Courses</div>
+    <div class="col-auto"><button class="btn btn-primary" (click)="Courses()">Courses</button></div>
+</div>
+<form [formGroup]="searchForm" class="form-inline my-2 my-lg-0 d-none d-lg-block ml-auto py-3">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" formControlName="Cors">
+    <button class="btn btn-outline-success my-2 my-sm-0" (click)="SearchCourses()" type="submit">Search</button>
+</form>
+<h6>{{allCourses.length}} Courses</h6>
+<hr>
+<div class="add">
+    <button class="add-btn" [routerLink]="['/courses', 'new']">Add Courses</button>
+  </div>
+<div class="container-fluid">
+    <div class="row border-bottom" *ngFor="let c of allCourses;">
+        <div class="col-lg-1">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link p-1 m-1 text-center small" href="#">DotNet</a>
+                    <a class="nav-link p-1 m-1 text-center samll" href="#">NodeJS</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
